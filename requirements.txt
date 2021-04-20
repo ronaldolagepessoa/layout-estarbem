@@ -1,0 +1,6 @@
+streamlit==0.73.1
+numpy==1.17.2
+pandas==0.25.1
+plotly==4.9.0
+xlrd==1.2.0
+pyomo==5.7.3

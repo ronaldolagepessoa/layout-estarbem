@@ -204,7 +204,7 @@ def get_recebimentos(df_recebimentos, multiplicador_volume):
     return df_recebimentos1
 
 def show_layout(df_layout, n_secoes_recebimentos, n_secoes_separacao):
-    myImg = np.zeros((512, 512 * 2, 3), np.uint8)
+    myImg = np.zeros((512 * 2, 512 * 2, 3), np.uint8)
     fig, ax = plt.subplots()
     ax.imshow(myImg)
     MARGEM_X = 20
@@ -217,7 +217,7 @@ def show_layout(df_layout, n_secoes_recebimentos, n_secoes_separacao):
         else:
             rect = patches.Rectangle((MARGEM_X + row['coluna']*50, MARGEM_Y + row['linha']*40), 40, 30, linewidth=1, edgecolor='g', facecolor='green')
         ax.add_patch(rect)
-        ax.text(MARGEM_X + row['coluna']*50 + 10, MARGEM_Y + row['linha']*40 + 25, f"{row['seção']}")
+        ax.text(MARGEM_X + row['coluna']*50 + 7, MARGEM_Y + row['linha']*40 + 25, f"{row['seção']}")
 
     rect = patches.Rectangle((512 * 2 - 200, 0), 200, 120, linewidth=1, edgecolor='black', 
                              facecolor='white')
